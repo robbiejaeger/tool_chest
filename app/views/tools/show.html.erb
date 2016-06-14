@@ -1,0 +1,10 @@
+<h1><%= @tool.name %> - <%= @tool.quantity %></h1>
+<h3 id="price"><%= @tool.price %></h3>
+
+<h3>Category: <%= @tool.category.name %></h3>
+
+<%= link_to "Edit #{@tool.name}", edit_tool_path(@tool) %><br>
+
+<%= link_to "Delete #{@tool.name}", tool_path(@tool), method: :delete %><br>
+
+<%= link_to "Back to All Tools", tools_path %>

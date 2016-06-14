@@ -1,0 +1,13 @@
+<h1>All Tools</h1>
+
+<% if current_user %>
+  <ul>
+    <% current_user.tools.each do |tool| %>
+      <li><%= link_to tool.name, tool_path(tool) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <h3><%= link_to "Login", login_path %> to see your toolbox</h3>
+<% end %>
+
+<%= link_to "Add a New Tool", new_tool_path %>
